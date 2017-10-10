@@ -4,7 +4,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /@bonobos, what should Stefanie do about paid slack/gim, (res) ->
+  robot.respond /bonobos, what should Stefanie do about paid slack/gim, (res) ->
     res.send "> Hey tefanie.thelen, can you pay for slack please!  It is the most awesomest thing ever.  We can do cool things like tell you the weather or hassle you about paying for slack!"
 
   # robot.respond /USERNAME/gim, (res) ->
