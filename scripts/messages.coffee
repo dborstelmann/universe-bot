@@ -4,17 +4,17 @@
 
 module.exports = (robot) ->
 
-  robot.respond /universe/gim, (res) ->
-    res.send "> GitHub is great, and Training Day is greater!!"
+  robot.respond /girlboss/gim, (res) ->
+    res.send "> Hey Stefanie, can you pay for slack please!"
 
-  robot.respond /USERNAME/gim, (res) ->
-    res.send " > That person is awesome"
-
-  robot.respond /fruit/gim, (res) ->
-    res.send " > My favorites are apples and grapes."
-
-  robot.respond /movie/gim, (res) ->
-    res.send " > My favorite movie is Blazing Saddles"
-
-  robot.respond /lunch/gim, (res) ->
-    res.send " > I want a peanut butter and jelly sandwich for lunch today."
+  # robot.respond /USERNAME/gim, (res) ->
+  #   res.send " > That person is awesome"
+  #
+  # robot.respond /fruit/gim, (res) ->
+  #   res.send " > My favorites are apples and grapes."
+  #
+  # robot.respond /movie/gim, (res) ->
+  #   res.send " > My favorite movie is Blazing Saddles"
+  #
+  # robot.respond /lunch/gim, (res) ->
+  #   res.send " > I want a peanut butter and jelly sandwich for lunch today."
