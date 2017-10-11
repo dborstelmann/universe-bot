@@ -4,8 +4,8 @@
 
 module.exports = (robot) ->
 
-  robot.respond /bonobos,\swhat\sshould\sStefanie\sdo\sabout\spaid\sslack/gim, (res) ->
-    res.send "> Hey tefanie.thelen, can you pay for slack please!  It is the most awesomest thing ever.  We can do cool things like tell you the weather or hassle you about paying for slack!"
+  robot.respond /soon/gim, (res) ->
+    res.send "> Hi Slalom STL, coming soon to Slack channels near you is the bot to end all bots.  If you have input on what you'd like out of me, please share in #bonobos.  Thanks!"
 
   # robot.respond /USERNAME/gim, (res) ->
   #   res.send " > That person is awesome"
