@@ -16,7 +16,7 @@ module.exports = (robot) ->
     (response) -> # Standard listener callback
       # Let Steve know how happy you are that he exists
       console.log(response)
-      console.log(robot)
+      console.log(robot.adapter.client.web.reactions)
       robot.adapter.client.web.reactions.add('honold', {channel: response.message.item.channel, timestamp: response.message.item.ts})
   )
   # robot.respond /alana/gim, (res) ->
