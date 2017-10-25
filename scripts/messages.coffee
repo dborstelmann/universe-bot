@@ -22,7 +22,7 @@ module.exports = (robot) ->
     (message) -> # Match function
       message.user.name is "first.last"
     (response) -> # Standard listener callback
-      if response.message.rawMessage.ts
+      if response.message.rawMessage
         robot.adapter.client.web.reactions.add('gradle', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
       else
         response.send "@first.last are you too scared to send a message?"
@@ -34,10 +34,10 @@ module.exports = (robot) ->
     (message) -> # Match function
       message.user.name is "cinque"
     (response) -> # Standard listener callback
-      if response.message.rawMessage.ts
+      if response.message.rawMessage
         robot.adapter.client.web.reactions.add('gradle', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
       else
-        response.send "@first.last are you too scared to send a message?"
+        response.send "@cinque are you too scared to send a message?"
   )
   # robot.respond /alana/gim, (res) ->
   #   res.send " > Alana, what you ask for is impossible.  I have no hands!"
