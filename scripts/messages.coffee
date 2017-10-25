@@ -15,9 +15,9 @@ module.exports = (robot) ->
       message.user.name is "cinque"
     (response) -> # Standard listener callback
       # Let Steve know how happy you are that he exists
-      console.log(robot.adapter.client.web.reactions)
-      console.log(response.message);
-      robot.adapter.client.web.reactions.add('honold', {channel: response.message.room, timestamp: response.message.ts})
+      console.log(response.message.room);
+      console.log(response.message.ts);
+      robot.adapter.client.web.reactions.add('honold', {channel: response.message.channel, timestamp: response.message.ts})
   )
   # robot.respond /alana/gim, (res) ->
   #   res.send " > Alana, what you ask for is impossible.  I have no hands!"
