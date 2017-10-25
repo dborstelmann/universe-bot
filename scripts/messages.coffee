@@ -17,7 +17,7 @@ module.exports = (robot) ->
       # Let Steve know how happy you are that he exists
       console.log(robot.adapter.client.web.reactions)
       console.log(response.message);
-      robot.adapter.client.web.reactions.add('honold', {channel: response.message.item.channel, timestamp: response.message.item.ts})
+      robot.adapter.client.web.reactions.add('honold', {channel: response.message.room, timestamp: response.message.ts})
   )
   # robot.respond /alana/gim, (res) ->
   #   res.send " > Alana, what you ask for is impossible.  I have no hands!"
