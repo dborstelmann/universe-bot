@@ -10,10 +10,13 @@ module.exports = (robot) ->
 
   robot.listen(
     (message) -> # Match function
-      message.user.name is "justin.honold"
-    (response) -> # Standard listener callback
-      robot.adapter.client.web.reactions.add('honold', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
-  )
+      if message.user.name is "justin.honold"
+        (response) -> # Standard listener callback
+          robot.adapter.client.web.reactions.add('honold', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
+      else if message.user.name is "first.last"
+        (response) -> # Standard listener callback
+          robot.adapter.client.web.reactions.add('gradle', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
+    )
   # robot.respond /alana/gim, (res) ->
   #   res.send " > Alana, what you ask for is impossible.  I have no hands!"
 
