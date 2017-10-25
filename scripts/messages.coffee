@@ -7,6 +7,15 @@ module.exports = (robot) ->
   robot.respond /soon/gim, (res) ->
     res.send "> Hi Slalom STL, coming soon to Slack channels near you is the bot to end all bots.  If you have input on what you'd like out of me, please share in #bonobos-ideas.  Thanks!"
 
+
+  robot.listen(
+    (message) -> # Match function
+      # Occassionally respond to things that Steve says
+      message.user.name is "dborstelmann"
+    (response) -> # Standard listener callback
+      # Let Steve know how happy you are that he exists
+      robot.adapter.client.web.reactions.add('honold', {channel: response.message.item.channel, timestamp: response.message.item.ts})
+  )
   # robot.respond /alana/gim, (res) ->
   #   res.send " > Alana, what you ask for is impossible.  I have no hands!"
 
