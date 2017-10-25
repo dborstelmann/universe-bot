@@ -16,7 +16,7 @@ module.exports = (robot) ->
     #   else if message.user.name is "first.last"
     #     (response) -> # Standard listener callback
     #       robot.adapter.client.web.reactions.add('gradle', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
-    )
+  )
 
   robot.listen(
     (message) -> # Match function
@@ -25,7 +25,7 @@ module.exports = (robot) ->
       robot.adapter.client.web.reactions.add('gradle', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
       #   else if message.user.name is "first.last"
       #     (response) -> # Standard listener callback
-      )
+  )
   # robot.respond /alana/gim, (res) ->
   #   res.send " > Alana, what you ask for is impossible.  I have no hands!"
 
