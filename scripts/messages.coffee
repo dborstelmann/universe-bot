@@ -11,9 +11,12 @@ module.exports = (robot) ->
   robot.listen(
     (message) -> # Match function
       # Occassionally respond to things that Steve says
-      message.user.name is "dborstelmann"
+      console.log(message.user.name)
+      message.user.name is "cinque"
     (response) -> # Standard listener callback
       # Let Steve know how happy you are that he exists
+      console.log(response)
+      console.log(robot)
       robot.adapter.client.web.reactions.add('honold', {channel: response.message.item.channel, timestamp: response.message.item.ts})
   )
   # robot.respond /alana/gim, (res) ->
