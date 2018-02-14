@@ -4,19 +4,19 @@
 
 module.exports = (robot) ->
 
-  robot.respond /soon/gim, (res) ->
-    res.send "> Hi Slalom STL, coming soon to Slack channels near you is the bot to end all bots.  If you have input on what you'd like out of me, please share in #bonobos-ideas.  Thanks!"
+  robot.respond /Hey Bonobos, what day is it today\?/gim, (res) ->
+    res.send "> Thanks for the shout out @cinque! February 14 Is World Bonobo Day. There are fewer than 15,000 bonobos left in the world. The Bonobo Project is here to help save them.  Read more at https://guidebook.bonobos.com/blog/bonobos-world-bonobo-day"
 
 
-  robot.listen(
-    (message) -> # Match function
-      message.user.name is "justin.honold"
-    (response) -> # Standard listener callback
-      robot.adapter.client.web.reactions.add('honold', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
-    #   else if message.user.name is "first.last"
-    #     (response) -> # Standard listener callback
-    #       robot.adapter.client.web.reactions.add('gradle', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
-  )
+  # robot.listen(
+  #   (message) -> # Match function
+  #     message.user.name is "justin.honold"
+  #   (response) -> # Standard listener callback
+  #     robot.adapter.client.web.reactions.add('honold', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
+  #   #   else if message.user.name is "first.last"
+  #   #     (response) -> # Standard listener callback
+  #   #       robot.adapter.client.web.reactions.add('gradle', {channel: response.message.room, timestamp: response.message.rawMessage.ts})
+  # )
 
   # robot.listen(
   #   (message) -> # Match function
