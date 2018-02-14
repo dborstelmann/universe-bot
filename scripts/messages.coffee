@@ -5,7 +5,7 @@
 module.exports = (robot) ->
 
   robot.respond /Hey Bonobos, what day is it today\?/gim, (res) ->
-    res.send "> Thanks for the shout out @cinque! February 14 Is World Bonobo Day. There are fewer than 15,000 bonobos left in the world. The Bonobo Project is here to help save them.  Read more at https://guidebook.bonobos.com/blog/bonobos-world-bonobo-day"
+    res.send "> Thanks for the shout out @cinque! February 14 Is World Bonobo Day, NOT Valentine's day. There are fewer than 15,000 bonobos left in the world. The Bonobo Project is here to help save them.  Read more at https://guidebook.bonobos.com/blog/bonobos-world-bonobo-day"
 
 
   # robot.listen(
